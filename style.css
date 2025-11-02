@@ -65,13 +65,10 @@ nav a:hover {
 }
 
 .hero img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #00eaff;
-    margin-bottom: 15px;
-    transition: .3s;
+    width: 140px;
+    height: 140px;
 }
+
 
 .hero img:hover {
     transform: scale(1.07);
@@ -215,4 +212,23 @@ footer {
     text-align: center;
     padding: 25px 0;
     font-size: 14px;
+}
+.skill-card img,
+.hobby-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+@media (max-width: 600px) {
+    .hero img {
+        width: 110px;
+        height: 110px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    nav {
+        gap: 15px;
+    }
 }
