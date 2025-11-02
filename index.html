@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Jesic's Portfolio</title>
+</head>
+
+<script>
+function sendEmail(event) {
+  event.preventDefault();
+  alert("Form submitted! Email functionality will be added when you want it to connect to Gmail/Backend.");
+}
+</script>
+
+
+<body>
+
+    <nav class="navbar">
+    <a href="#about">About Me</a>
+    <a href="#who">Who Am I?</a>
+    <a href="#skills">Skills</a>
+    <a href="#hobbies">Hobbies</a>
+    <li><a href="#contact">Contact</a></li>
+
+ </nav>
+
+
+    <header class="hero">
+    <h1>Jesic's Portfolio</h1>
+    <img src="profile.jpg" alt="Jesic" class="profile-img">
+    <p>This is my first website.</p> </header>
+
+
+    <section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hi! I'm Jesic, a beginner web developer excited to learn coding and 
+        create amazing websites. I enjoy exploring technology, designing 
+        creative layouts, and improving my skills every day.
+    </p>
+ </section>
+
+
+    <section id="who">
+        <h2>Who Am I?</h2>
+        <p>I am a student learning how to create websites. My age is 12 years old.</p>
+    </section>
+
+    <div class="skill-bars">
+  <div class="bar">
+    <span>HTML</span>
+    <div class="progress" style="--progress: 90%"></div>
+  </div>
+  
+  <div class="bar">
+    <span>CSS</span>
+    <div class="progress" style="--progress: 80%"></div>
+  </div>
+  
+  <div class="bar">
+    <span>JavaScript</span>
+    <div class="progress" style="--progress: 50%"></div>
+  </div>
+ </div>
+   
+ <section id="skills" class="skills-section hidden">
+    <h2 class="section-title">My Skills</h2>
+    
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>Web Development</h3>
+            <p>Learning HTML, CSS & JavaScript.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Gaming</h3>
+            <p>Competitive & team strategy games.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Fitness</h3>
+            <p>Workout, strength & discipline.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Fast Learner</h3>
+            <p>Can adapt and improve quickly.</p>
+        </div>
+    </section>
+
+
+
+
+   <section id="hobbies" class="hobbies-section hidden">
+   <h2 class="section-title">My Hobbies</h2>
+
+    <div class="hobby-container">
+        
+        <div class="hobby-card">
+            <img src="cricket.jpg" alt="Cricket">
+            <p>Cricket</p>
+        </div>
+
+        <div class="hobby-card">
+            <img src="badminton.jpg" alt="Badminton">
+            <p>Badminton</p>
+        </div>
+
+        <div class="hobby-card">
+            <img src="technology.jpg" alt="Technology">
+            <p>Technology</p>
+        </div>
+
+    </div>
+ </section>
+
+
+
+    <script>
+ document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');   // animate in
+      } else {
+        entry.target.classList.remove('visible'); // reset so it can animate next time
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(sec => observer.observe(sec));
+ });
+ </script>
+ 
+ <button id="backToTop">↑</button>
+ <script>
+ const topBtn = document.getElementById("backToTop");
+ window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    topBtn.style.display = "flex";
+  } else {
+    topBtn.style.display = "none";
+  }
+ });
+
+ topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+ });
+
+ </script>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This is my first ever website, built using HTML, CSS & JavaScript.</p>
+    </div>
+ </section>
+ 
+ <section id="contact">
+  <h2>Contact Me</h2>
+  <p>You can reach me at: <a href="mailto:vanshy25042005@gmail.com">vanshy25042005@gmail.com</a></p>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/9737371712" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+ </section>
+
+ <form action="https://formsubmit.co/vanshy25042005@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://jesclearns.github.io/JESIC.PORTFOLIO/thanks.html">
+    
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email"></label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send Message</button>
+ </form>
+
+
+ <footer>
+    <p>© 2025 Jesic. All rights reserved.</p>
+ </footer>
+
+</body>
+</html>
