@@ -348,6 +348,8 @@ h1, h2, h3 {
 }
 
 /* Navbar */
+
+
 nav {
   background: #0f1629;
   box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
@@ -359,6 +361,17 @@ nav a {
 
 nav a:hover {
   color: #29ffc6;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.05) !important;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* Cards */
@@ -577,4 +590,21 @@ section {
 .contact-form button:hover {
   background: #0e8a6e;
   transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #0d0d0d;
+  color: white;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
