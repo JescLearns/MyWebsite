@@ -611,5 +611,28 @@ footer a:hover {
 =======
 body {
     background-color: black;
->>>>>>> 93c6c12ce799179a0010fae10df45a5dd8913a37
+    .hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #101010, #000);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 45px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: white;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ddd;
 }
