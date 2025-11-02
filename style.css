@@ -578,3 +578,6 @@ section {
   background: #0e8a6e;
   transform: scale(1.05);
 }
+body {
+    background-color: black;
+}
