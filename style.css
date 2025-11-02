@@ -591,6 +591,7 @@ section {
   background: #0e8a6e;
   transform: scale(1.05);
 }
+<<<<<<< HEAD
 footer {
   text-align: center;
   padding: 30px;
@@ -607,4 +608,8 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+=======
+body {
+    background-color: black;
+>>>>>>> 93c6c12ce799179a0010fae10df45a5dd8913a37
 }
