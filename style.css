@@ -201,7 +201,44 @@ section:nth-of-type(even) {
     justify-content: center;
   }
 
-  .skill-card {
+  .navbar a {
+    margin: 10px;
+    font-size: 14px;
+  }
+}
+/* Skills Section */
+.skills-section {
+    padding: 20px 20px 60px;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 230px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 .skill-card h3 {
@@ -574,28 +611,3 @@ footer a:hover {
 =======
 body {
     background-color: black;
-    .hero {
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(135deg, #101010, #000);
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 45px;
-  color: #4CAF50;
-  margin-bottom: 10px;
-}
-
-.hero h1 span {
-  color: white;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #ddd;
-}
