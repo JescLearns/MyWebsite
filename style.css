@@ -145,6 +145,7 @@ section:nth-child(odd) {
     position: relative;
 }
 
+
 }
 /* Section appearance + animation */
 section {
@@ -648,4 +649,24 @@ footer a:hover {
     border: 5px solid #00e5ff;
     margin-bottom: 20px;
     object-fit: cover;
+}
+/* Bounce Animation for Hero Title */
+.hero-title {
+    animation: bounceIn 1.5s ease-out forwards;
+    opacity: 1 !important;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
