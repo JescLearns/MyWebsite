@@ -135,7 +135,16 @@ section:nth-child(odd) {
 }
 
 .hero {
-    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
 }
 /* Section appearance + animation */
 section {
@@ -628,4 +637,15 @@ footer a:hover {
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(15px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+.hero-title {
+    opacity: 1 !important;
+}
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid #00e5ff;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
