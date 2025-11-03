@@ -701,3 +701,47 @@ footer a:hover {
     opacity: 1 !important;
     transform: none !important;
 }
+/* HERO SECTION FIX */
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* spacing between items */
+    padding: 0;
+}
+
+/* PROFILE IMAGE CENTER & SPACING */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #00e5ff;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Fix text not centering */
+.hero-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Ensure animation stays visible */
+.hero-title, .hero-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-title {
+    animation: bounce 2s infinite;
+}
