@@ -56,8 +56,9 @@ nav {
 h1 {
     margin-top: 120px;
     color: #ff6600;
-    font-size: 40px;
+    font-size: 90px;
 }
+p
 
 h2 {
     color: #008C00;
@@ -100,19 +101,6 @@ section, .hero {
     margin: auto;
 }
 
-/* Profile Image Styling */
-.profile-img {
-    width: 160px;
-    border-radius: 50%;
-    border: 5px solid #00aaff;
-    transition: 0.3s ease-in-out;
-}
-
-.profile-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-}
-
 /* Section Spacing Update */
 section {
     margin-top: 60px;
@@ -133,18 +121,6 @@ section:nth-child(even) {
 section:nth-child(odd) {
     background: white;
 }
-
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center !important;
-    padding: 20px;
-    position: relative;
-}
-
 
 }
 /* Section appearance + animation */
