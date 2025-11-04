@@ -616,32 +616,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Hero Title Animation */
-.hero-title {
-    opacity: 0;
-    transform: translateY(-25px);
-    animation: bounceIn 1s forwards ease-out;
-}
-
 @keyframes bounceIn {
     0% { opacity: 0; transform: translateY(-25px); }
     50% { opacity: 1; transform: translateY(8px); }
     100% { transform: translateY(0); }
 }
 
-/* Subtitle Smooth Fade-in */
-.hero-subtitle {
-    opacity: 0;
-    animation: fadeInUp 1s forwards ease-out 0.6s;
-}
-
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(15px); }
     100% { opacity: 1; transform: translateY(0); }
 }
-.hero-title {
-    opacity: 1 !important;
-}
+
 .profile-img {
     width: 220px;
     height: 220px;
@@ -744,4 +729,48 @@ footer a:hover {
 
 .hero-title {
     animation: bounce 2s infinite;
+}
+
+/* ---- Hero animations ---- */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* animation classes */
+.animate-fade {
+  animation: fadeInUp 0.8s ease-out forwards;
+  /* starts hidden until animation plays */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.animate-bounce {
+  animation: floatBounce 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* tweak for profile image */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #00e5ff;
+  object-fit: cover;
+  /* allow bounce to animate visibly */
+  will-change: transform;
+}
+
+/* ensure hero text uses the centered layout you fixed */
+.hero-title { font-size: 36px; line-height: 1.05; }
+.hero-subtitle { font-size: 18px; opacity: .9; }
+
+/* small safety: avoid global rules overriding starting state */
+.hero-title.animated, .hero-subtitle.animated, .profile-img.animated {
+  /* nothing here — classes above do the work */
 }
