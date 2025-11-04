@@ -213,42 +213,6 @@ function sendEmail(event) {
   </p>
  </footer>
 
- <script>
-  // Run when DOM loaded
-  window.addEventListener('DOMContentLoaded', () => {
-    // Elements
-    const title = document.querySelector('.hero-title');
-    const subtitle = document.querySelector('.hero-subtitle');
-    const avatar = document.querySelector('.profile-img');
-
-    // Guard: ensure elements exist
-    if (title) {
-      // Add fade animation then add bouncing avatar after a small delay
-      title.classList.add('animate-fade');
-    }
-    if (subtitle) {
-      // Slight delay so subtitle fades after title
-      setTimeout(()=> subtitle.classList.add('animate-fade'), 150);
-    }
-    if (avatar) {
-      // make avatar fade in quickly, then apply infinite float after
-      setTimeout(()=> {
-        avatar.classList.add('animate-fade');
-        // after fade completes, add bounce
-        setTimeout(()=> avatar.classList.add('animate-bounce'), 900);
-      }, 350);
-    }
-  });
- </script>
-
- <script>
- document.addEventListener('DOMContentLoaded', ()=> {
-  document.querySelector('.hero-title')?.classList.add('entrance');
-  document.querySelector('.hero-subtitle')?.classList.add('entrance');
-  document.querySelector('.profile-img')?.classList.add('entrance');
- });
- </script>
-
 
 </body>
 </html>
