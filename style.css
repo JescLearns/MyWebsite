@@ -140,7 +140,7 @@ section:nth-child(odd) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center !important;
     padding: 20px;
     position: relative;
 }
