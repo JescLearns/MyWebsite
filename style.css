@@ -68,7 +68,7 @@ nav {
 
 
 .hero-content h1 {
-    color: #ffffff;
+    color: #00eaff;
     font-size: 3rem;
     font-weight: 700;
 }
@@ -80,14 +80,14 @@ nav {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #c6e7ff;
+    color: #32373b;
     margin: 10px 0;
 }
 
 .hero-text {
     margin: 15px 0;
     font-size: 1rem;
-    color: #d7eaff;
+    color: #111519;
 }
 
 .btn {
